@@ -32,9 +32,10 @@ In this guide, we'll show you how to identify when your disk space is running lo
 ## Identifying the Problem
 The first step in troubleshooting disk space issues is to identify whether this is the cause of the problem you're encountering. Here are some common signs that your disk space is running low:
 
-You receive error messages indicating that there is no space left on the disk.
-Your system runs slowly or freezes up, especially when trying to access or write to files.
-You're unable to install or update software packages due to insufficient disk space.
+- You receive error messages indicating that there is no space left on the disk.
+- Your system runs slowly or freezes up, especially when trying to access or write to files.
+- You're unable to install or update software packages due to insufficient disk space.
+
 To check the available disk space on your CentOS system, you can use the df command:
 
 ```
@@ -44,6 +45,7 @@ df -h
 This will display the disk usage information for all mounted file systems, including the amount of free space available.
 
 If the output shows that your disk is almost full or completely full, you'll need to free up some space in order to resolve the issue.
+
 
 ## Freeing Up Disk Space
 There are several ways to free up disk space on a CentOS system. Here are some common methods:
@@ -65,13 +67,20 @@ sudo tmpwatch 7 /var/tmp
 ```
 This will remove any files in the /tmp and /var/tmp directories that are more than 7 days old.
 
-### 3. Uninstall unused software
+### 3. Uninstall unused software and other big files
 Uninstalling software that you no longer need can also free up disk space. You can use the yum package manager to remove packages that you no longer need:
 
 ```
 sudo yum remove package-name
 ```
 Replace package-name with the name of the package that you want to remove.
+
+You can also use these commands to find big files and remove them if it is possible
+```
+find / -mount -size +8096 -ls
+find / -mount -name core -ls
+du -sh /* (repeat for subsequent dirs on /)
+```
 
 ### 4. Clear the YUM cache
 The yum package manager caches downloaded packages in order to speed up future installations. However, this cache can consume a significant amount of disk space over time. You can clear the YUM cache by running the following command:
@@ -87,6 +96,51 @@ By following the above steps, you should be able to free up disk space on your C
 <details>
 <summary>File system corruption</summary>
 
+## Introduction
+File system corruption can occur on your CentOS system due to various reasons such as power failure, hardware issues, software bugs, or even malware attacks. This can cause data loss or make it difficult to access files and directories on the file system. In this guide, we will go through the steps to troubleshoot and resolve file system corruption issues on CentOS.
+
+## Understanding the Issue
+When your file system is corrupt, you may encounter one or more of the following symptoms:
+
+- Unable to access files or directories on the file system
+- Unexpected system crashes or hangs
+- Applications or services failing to start or behaving abnormally
+- Unusually slow performance or disk activity
+- Error messages indicating file system corruption or integrity issues
+- If you notice any of these symptoms, there's a good chance that your file system is corrupt and needs to be fixed.
+
+## Troubleshooting Steps
+Here are the steps you can follow to troubleshoot and fix file system corruption issues on CentOS:
+
+### 1. Check Disk Space
+Before you begin, make sure that your disk has enough free space. A full disk can cause file system corruption, so ensure that you have enough free space to work with.
+
+You can check the disk usage on your system by running the following command:
+
+```
+df -h
+```
+
+This will show you the disk usage in human-readable format. Look for any file system that has a high usage percentage or is at 100% capacity. If you find any such file system, you may need to delete unnecessary files or expand the file system to free up space.
+
+### 2. Run File System Check
+Next, you can run a file system check to detect and repair any file system errors. CentOS uses the fsck utility for file system checks.
+
+To run a file system check on your root file system, boot your system into recovery mode and select the option to run a file system check. Alternatively, you can run the following command to check the file system when the system is running:
+
+```
+sudo fsck -f /dev/sdaX
+```
+Replace /dev/sdaX with the device file of the file system you want to check. This will run a file system check and attempt to fix any errors it finds.
+
+### 3. Restore from Backup
+If the file system check doesn't resolve the issue, and you have a backup of your system, you can restore the file system from the backup. This will help you recover your data and get your system up and running again.
+
+### 4. Reinstall the Operating System
+If none of the above steps work, and you don't have a backup, you may need to reinstall the operating system. This will wipe your system and install a fresh copy of CentOS. Remember to backup your data before proceeding with a reinstallation.
+
+### Conclusion
+File system corruption can cause data loss and system instability, but following the steps in this guide can help you troubleshoot and fix the issue on your CentOS system. Remember to regularly backup your data to avoid losing important files in case of any future file system corruption issues.
 <details>
 <summary>Incorrect or missing entries in the fstab file</summary>
 
