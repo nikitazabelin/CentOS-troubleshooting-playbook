@@ -211,6 +211,7 @@ Incorrect or missing entries in the fstab file can cause issues with file system
 <details>
 <summary>Permission denied errors when changing directories or accessing files</summary>
 
+
 If you encounter "Permission denied" errors when changing directories or accessing files in CentOS, it may be due to incorrect file permissions or ownership settings. This issue can be caused by a number of reasons, including user error, incorrect configuration, or system issues.
 
 ## Symptoms
@@ -234,6 +235,7 @@ If you encounter "Permission denied" errors when changing directories or accessi
 5. Check for SELinux issues: If SELinux is enabled on your system, it may be blocking access to the file or directory. Use the sestatus command to check the SELinux status, and use the setenforce command to temporarily disable SELinux to see if it is the cause of the issue.
 
 ## Conclusion
+
 "Permission denied" errors when changing directories or accessing files in CentOS can be frustrating, but they are usually caused by incorrect file permissions or ownership settings. By following the troubleshooting steps above, you should be able to identify and resolve the issue.
 
 </details>
@@ -334,6 +336,7 @@ By following the above steps, you should be able to troubleshoot and fix the iss
 </details>
 <details>
 <summary>System running out of memory</summary>
+
 
 Sometimes, a system running CentOS may experience issues related to running out of memory. This can cause the system to become slow, freeze, or even crash. In this guide, we will cover how to troubleshoot this issue and resolve it on a CentOS system.
 
