@@ -93,7 +93,9 @@ If none of the above methods work or if you need more space than you can free up
 
 ### Conclusion
 By following the above steps, you should be able to free up disk space on your CentOS system and resolve any disk space-related issues that you may encounter. If you continue to experience issues after trying these steps, it's recommended to seek help from a qualified Linux administrator.
+
 <details>
+
 <summary>File system corruption</summary>
 
 ## Introduction
