@@ -894,7 +894,7 @@ If the SELinux context of the file or command is incorrect, you can adjust it us
 
 ```
 sudo chcon -t type /path/to/file
-sudo chcon -t type `which command`
+sudo chcon -t type `which command` 
 ```
 Replace "type" with the correct SELinux context type for the file or command. You can find a list of context types in the SELinux policy file.
 
