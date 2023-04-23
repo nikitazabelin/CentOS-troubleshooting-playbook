@@ -831,6 +831,7 @@ By following these troubleshooting steps, you can resolve package management iss
 
 <details>
 <summary>SELinux-related permission denied errors</summary>
+
 ## Introduction
 Sometimes when using CentOS, you might encounter permission denied errors when attempting to perform certain actions, such as accessing a file or running a command. These errors can often be caused by SELinux (Security-Enhanced Linux) restrictions, which are designed to provide additional security to your system.
 
@@ -916,6 +917,7 @@ You can temporarily disable SELinux to test whether it is the source of the perm
 SELinux-related permission denied errors can be frustrating to diagnose and resolve, but understanding how SELinux works and how to adjust the policy can help you quickly get your CentOS system back up and running. By following the troubleshooting steps outlined above, you can identify the source of the issue and implement the appropriate solution
 
 </details>
+
 <details>
 <summary>Boot issues (e.g., booting into emergency mode, kernel panic)</summary>
 
