@@ -915,7 +915,6 @@ You can temporarily disable SELinux to test whether it is the source of the perm
 
 ## Conclusion
 SELinux-related permission denied errors can be frustrating to diagnose and resolve, but understanding how SELinux works and how to adjust the policy can help you quickly get your CentOS system back up and running. By following the troubleshooting steps outlined above, you can identify the source of the issue and implement the appropriate solution
-
 </details>
 
 <details>
