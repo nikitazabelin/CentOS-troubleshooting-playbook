@@ -892,7 +892,7 @@ The output will include information about the SELinux context, such as:
 ### 3. Adjust the SELinux context of the file or command
 If the SELinux context of the file or command is incorrect, you can adjust it using the "chcon" command:
 
-````
+```
 sudo chcon -t type /path/to/file
 sudo chcon -t type `which command`
 ```
