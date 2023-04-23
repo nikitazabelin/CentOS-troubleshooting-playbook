@@ -975,7 +975,6 @@ If the system is failing to boot due to a kernel issue, you can try reinstalling
 Boot issues can be caused by a variety of factors, ranging from software errors to hardware failures. By following the troubleshooting steps outlined in this guide, you should be able to identify and resolve the issue and get your CentOS system back up and running again.
 
 </details>
-
 <details>
 <summary>HTTP error 403: forbidden yum occurs when we try to install a package using yum</summary>
 
@@ -1051,4 +1050,5 @@ If none of the above solutions work, the issue may be due to server-side issues.
 ## Conclusion
 
 By following the above solutions, you should be able to resolve the HTTP error 403: forbidden yum issue for CentOS.
+
 </details>
